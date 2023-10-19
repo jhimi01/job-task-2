@@ -115,3 +115,30 @@ main{
     right: 0;
     z-index: 10;
 }
+
+.images-content{
+    /* height: 100vh; */
+    /* overflow-y: hidden; */
+}
+
+
+@media only screen and (max-width: 800px) {
+    main {
+        position: static;
+        flex-direction: column-reverse;
+    }
+    .content-left{
+        position: static;
+        height: 100%;
+        padding: 20px 30px;
+    }
+    .content-left .img-wraper img{
+        display: none;
+    }
+    .content-left .others-content{
+        position: static;
+    } 
+    .image-right{
+        position: static;
+    }
+  }
