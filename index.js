@@ -2,10 +2,17 @@
 function increaseStrokeDashArray() {
   // Select the SVG path element with class "transrgwht"
   let pathElement = document.querySelector(".transrgwht");
+  pathElement.style.fill="red";
+
+  console.log(pathElement)
 
   if (pathElement) {
     // Get the current value of stroke-dasharray
-    let currentDashArray = pathElement.getAttribute("stroke-dasharray");
+    let currentDashArray = pathElement.getComputed
+    ("stroke-dasharray");
+
+    let computedstyle = window.getComputedStyle(pathElement)
+    // console.log(computedstyle.getPropertyValue("stroke-dasharray"))
 
     // Convert the value to a number and add 140
     let newDashArray = parseFloat(currentDashArray) + 140;
@@ -24,7 +31,7 @@ function changeColors() {
   let screenHeight = window.innerHeight;
   let scrollPosition = (window.scrollY / screenHeight) * 100;
   // let scrollPosition = window.scrollY / screenHeight * 100;
-  console.log(screenHeight);
+  // console.log(screenHeight);
 
   if (scrollPosition > 95) {
     rootStyles.setProperty("--whole-bg-color", "#546de5");
@@ -47,8 +54,8 @@ function changeColors() {
         .forEach((element) => {
           element.classList.add("active");
         });
+      }, 0);
       increaseStrokeDashArray();
-    }, 0);
   } else if (scrollPosition > 80) {
     rootStyles.setProperty("--whole-bg-color", "#f19066");
     rootStyles.setProperty("--left-section-bg-color", "#f7d794");
@@ -150,8 +157,8 @@ function changeColors() {
         <h1 class="title">ABC 456</h1>
         <P>We are the best web developer company in the world</P>
         <div class="btn-grp">
-            <button>Another New Button 1</button>
-            <button>Another New Button 2</button>
+            <button>View Case Study</button>
+            <button style="letter-spacing: 6px;">Skip</button>
         </div>
     `;
     imgincontent.innerHTML = `

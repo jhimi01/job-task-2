@@ -98,13 +98,27 @@ main{
     position: absolute;
     bottom: 0;
     padding: 20px;
+    /* width: 100rem; */
 }
 
 .others-content .btn-grp{
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
+.btn-grp button{
+    font-size: 15px;
+}
+
+.others-content img{
+    margin-bottom: 60px;
+}
+
+.owl-dots{
+    position: absolute;
+    z-index: 10000000;
+}
 
 /* images right content */
 .image-right{
@@ -119,6 +133,7 @@ main{
 .images-content{
     /* height: 100vh; */
     /* overflow-y: hidden; */
+    width: 100%;
 }
 
 
@@ -127,18 +142,33 @@ main{
         position: static;
         flex-direction: column-reverse;
     }
+    .title{
+        font-size: 30px;
+       }
     .content-left{
         position: static;
         height: 100%;
         padding: 20px 30px;
+        width: 100%;
     }
     .content-left .img-wraper img{
         display: none;
+    }
+    .content-left .img-wraper .img-in-content{
+        position: static;
     }
     .content-left .others-content{
         position: static;
     } 
     .image-right{
         position: static;
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+        height: 100%;
+    }
+    .image-right .images-content img{
+        height: 100%;
+        /* width: 100%; */
     }
   }
