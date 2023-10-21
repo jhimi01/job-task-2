@@ -1,72 +1,75 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    
-}
-
-/* scroll bar */
-/* width */
-::-webkit-scrollbar {
+  }
+  
+  /* scroll bar */
+  /* width */
+  ::-webkit-scrollbar {
     width: 8px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: none; 
+    background: none;
   }
-   
+  
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
   }
-
-/* color variable */
-:root{
+  
+  /* color variable */
+  :root {
     --whole-bg-color: #000;
     --left-section-bg-color: #34495e;
-}
-
-.title, p, .btn-grp button, .small-img {
+  }
+  
+  .title,
+  p,
+  .btn-grp button,
+  .small-img {
     transition: transform 0.5s;
     transform: translateY(40px);
     opacity: 0;
-}
-
-.title.active, p.active, .btn-grp button.active, .small-img.active {
+  }
+  
+  .title.active,
+  p.active,
+  .btn-grp button.active,
+  .small-img.active {
     transform: translateY(0);
     opacity: 1;
-}
-
-
-body{
+  }
+  
+  body {
     background: var(--whole-bg-color);
-}
-
-button{
+  }
+  
+  button {
     background: none;
     outline: none;
     border: none;
     color: #fff;
-}
-
-main{
-   
+  }
+  
+  main {
     display: flex;
     align-items: center;
     position: relative;
-   }
-
-   .title{
+  }
+  
+  .title {
     font-size: 50px;
-   }
-.content-left{
+  }
+  .content-left {
     background: var(--left-section-bg-color);
     height: 100vh;
     width: 45%;
@@ -74,101 +77,102 @@ main{
     top: 0;
     z-index: 200;
     color: #fff;
-}
-.img-wraper{
+  }
+  .img-wraper {
     position: relative;
-}
-.img-wraper .img-in-content{
+  }
+  .img-wraper .img-in-content {
     position: absolute;
     top: 150px;
     right: 0;
     z-index: 300;
-}
-.content-left .img-wraper img{
-  position: absolute;
-  top: 50px;
-  right: -100px;
-  width: 300px;
-  height: 300px;
-  background: var(--left-section-bg-color);
-  border-radius: 50%;
-  z-index: 200;
-}
-.others-content{
+  }
+  .content-left .img-wraper img,
+  .img {
+    position: absolute;
+    top: 50px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: var(--left-section-bg-color);
+    border-radius: 50%;
+    z-index: 200;
+  }
+  .others-content {
     position: absolute;
     bottom: 0;
     padding: 20px;
     /* width: 100rem; */
-}
-
-.others-content .btn-grp{
+  }
+  
+  .others-content .btn-grp {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-}
-
-.btn-grp button{
+  }
+  
+  .btn-grp button {
     font-size: 15px;
-}
-
-.others-content img{
+  }
+  
+  .others-content img {
     margin-bottom: 60px;
-}
-
-.owl-dots{
+  }
+  
+  .owl-dots {
     position: absolute;
     z-index: 10000000;
-}
-
-/* images right content */
-.image-right{
+  }
+  
+  /* images right content */
+  .image-right {
     background: #5988ce;
     height: 100%;
     width: 55%;
     position: absolute;
     right: 0;
     z-index: 10;
-}
-
-.images-content{
+  }
+  
+  .images-content {
     /* height: 100vh; */
     /* overflow-y: hidden; */
     width: 100%;
-}
-
-
-@media only screen and (max-width: 800px) {
+  }
+  
+  @media only screen and (max-width: 800px) {
     main {
-        position: static;
-        flex-direction: column-reverse;
+      position: static;
+      flex-direction: column-reverse;
     }
-    .title{
-        font-size: 30px;
-       }
-    .content-left{
-        position: static;
-        height: 100%;
-        padding: 20px 30px;
-        width: 100%;
+    .title {
+      font-size: 30px;
     }
-    .content-left .img-wraper img{
-        display: none;
+    .content-left {
+      position: static;
+      height: 100%;
+      padding: 20px 30px;
+      width: 100%;
     }
-    .content-left .img-wraper .img-in-content{
-        position: static;
+    .content-left .img-wraper img {
+      display: none;
     }
-    .content-left .others-content{
-        position: static;
-    } 
-    .image-right{
-        position: static;
-        display: flex;
-        overflow-x: auto;
-        width: 100%;
-        height: 100%;
+    .content-left .img-wraper .img-in-content {
+      position: static;
     }
-    .image-right .images-content img{
-        height: 100%;
-        /* width: 100%; */
+    .content-left .others-content {
+      position: static;
+    }
+    .image-right {
+      position: static;
+      display: flex;
+      overflow-x: auto;
+      width: 100%;
+      height: 100%;
+    }
+    .image-right .images-content img {
+      height: 100%;
+      /* width: 100%; */
     }
   }
+  
